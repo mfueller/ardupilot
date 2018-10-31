@@ -106,6 +106,11 @@
 #define AP_SERIALMANAGER_MSP_BUFSIZE_TX     256
 #define AP_SERIALMANAGER_MSP_BAUD           115200
 
+// Visca protocol default baud rates and buffer sizes  
+#define AP_SERIALMANAGER_VISCA_BAUD             9600
+#define AP_SERIALMANAGER_VISCA_BUFSIZE_RX       128
+#define AP_SERIALMANAGER_VISCA_BUFSIZE_TX       128
+
 class AP_SerialManager {
 public:
     AP_SerialManager();
@@ -151,6 +156,7 @@ public:
         SerialProtocol_MSP = 32,
         SerialProtocol_DJI_FPV = 33,
         SerialProtocol_Sagetech = 34,
+        SerialProtocol_Visca = 35,
         SerialProtocol_NumProtocols                    // must be the last value
     };
 
