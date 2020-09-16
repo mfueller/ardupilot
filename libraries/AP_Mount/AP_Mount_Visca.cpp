@@ -1,8 +1,11 @@
 #include "AP_Mount_Visca.h"
+#include <AP_SerialManager/AP_SerialManager.h>
 
 extern const AP_HAL::HAL& hal;
 
-void AP_Mount_Visca::init(const AP_SerialManager& serial_manager)
+const AP_SerialManager& serial_manager = AP::serialmanager();
+
+void AP_Mount_Visca::init()
 {
     // check for Visca protocol 
     if ((_port = serial_manager.find_serial(AP_SerialManager::SerialProtocol_Visca, 0))) {
